@@ -1,4 +1,8 @@
-﻿Public Class Possession
+﻿''' <summary>
+''' Random possesion
+''' </summary>
+''' <remarks></remarks>
+Public Class Possession
     Public PlayerNumber As Int16
     Public Sub New()
 
