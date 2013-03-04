@@ -101,6 +101,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Player.vb" />
+    <Compile Include="Possession.vb" />
     <Compile Include="PractiseMatch.vb" />
     <Compile Include="Squad.vb" />
     <Compile Include="Team.vb" />
