@@ -10,6 +10,7 @@ Module PractiseMatch
         For Each Player In FilteredList
             Console.WriteLine(Player.Name)
         Next
+
     End Sub
 
 

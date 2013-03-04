@@ -1,6 +1,16 @@
 ﻿Public Class Team
     Private _name As String
-    Private _birthDate As DateTime
+    Private _dtEstablished As DateTime
+
+    Property dtEstablished As DateTime
+        Get
+            Return _dtEstablished
+        End Get
+        Set(ByVal value As DateTime)
+            Me._dtEstablished = dtEstablished
+        End Set
+    End Property
+
 
     Public _ListOfPlayers As IList(Of Player)
 
@@ -15,24 +25,12 @@
         End Set
     End Property
 
-    Public Sub New()
+    Public Sub New(ByVal ListOfPlayers As IList(Of Player))
 
         'Dim myPlayer As New Player("Jack Gledhill")
 
-
-        Dim TempList As New List(Of Player)()
-
-        Dim Player = New Player("Jack Gledhill", 9)
-
-        TempList.Add(Player)
-        TempList.Add(New Player("Jon Pankhurst", 1))
-
-        _ListOfPlayers = TempList
-
-        'i9jiuoj
-        'tyest
-
-
+        _ListOfPlayers = ListOfPlayers
+        _dtEstablished = Now()
 
     End Sub
 End Class
