@@ -22,6 +22,8 @@ Module PractiseMatch
             'take ball away
             MyManager.TeamList(Possession.PlayerNumber).Possession = False
             'pick a new player to pass to
+            Possession = Nothing
+
             Possession = New Possession()
 
             'Display the player
