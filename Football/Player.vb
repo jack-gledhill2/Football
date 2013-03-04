@@ -7,18 +7,6 @@
     Private _position As String
     Private _possession As Boolean
 
-
-    Public Property Name As String
-        Get
-            Return _name
-        End Get
-        Set(ByVal value As String)
-            If Not String.IsNullOrEmpty(value) Then
-                _name = value
-            End If
-        End Set
-    End Property
-
     Public ReadOnly Property Age As Integer
         Get
             Dim diff = DateTime.Now - _birthDate
@@ -30,11 +18,11 @@
     ''' Creates a new player imstance
     ''' </summary>
     ''' <param name="Player_Name">The players name</param>
-    ''' <param name="BirthDate"></param>
-    ''' <param name="ShirtNumber"></param>
-    ''' <param name="StrongerFoot"></param>
-    ''' <param name="Position"></param>
-    ''' <param name="Possession"></param>
+    ''' <param name="BirthDate">The players age</param>
+    ''' <param name="ShirtNumber">The players shirt number</param>
+    ''' <param name="StrongerFoot">The Players stronger foot</param>
+    ''' <param name="Position">The player position</param>
+    ''' <param name="Possession">Whether the player has the ball or not</param>
     ''' <remarks></remarks>
     Public Sub New(ByVal Player_Name As String,
                    ByVal BirthDate As DateTime,
@@ -51,6 +39,34 @@
         _possession = Possession
 
     End Sub
+    Public Property Name As String
+        Get
+            Return _name
+        End Get
+        Set(ByVal value As String)
+            If Not String.IsNullOrEmpty(value) Then
+                _name = value
+            End If
+        End Set
+    End Property
+    Property ShirtNumber As Integer
+        Get
+            Return _shirtNumber
+
+        End Get
+        Set(ByVal value As Integer)
+            _shirtNumber = value
+        End Set
+    End Property
+    Property StrongFoot As Boolean
+        Get
+            Return _strongerFoot
+        End Get
+        Set(ByVal value As Boolean)
+            _strongerFoot = value
+        End Set
+    End Property
+
     Public Property Position As String
         Get
             Return _position

@@ -2,13 +2,26 @@
 
 Module PractiseMatch
     Sub Main()
-        Dim Team As New Team()
-        Dim FilteredList As IEnumerable(Of Player)
 
-        FilteredList = From t In Team._ListOfPlayers Where t.Name Like "Jack Gledhill"
+        Dim MyManager As New Manager()
 
-        For Each Player In FilteredList
-            Console.WriteLine(Player.Name)
+        'Dim FilteredList As IEnumerable(Of Player)
+
+        ' FilteredList = From t In MyManager.TeamList Ord
+
+        Dim PlayerCount As Int16 = 15
+
+
+
+
+
+        For Each Player In MyManager.TeamList
+            If Player.Possession Then
+                Console.WriteLine(CStr(Player.ShirtNumber) & " " & Player.Name & " ON THE BALL!")
+            Else
+                Console.WriteLine(CStr(Player.ShirtNumber) & " " & Player.Name)
+            End If
+
         Next
 
     End Sub

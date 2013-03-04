@@ -1,10 +1,32 @@
 ﻿Public Class Manager
+
+    Private _rand As New Random()
+
+    Public TeamList As IEnumerable(Of Player)
+
     Public Sub New()
 
+        Dim Sqaud As New Squad()
 
-        Dim Player = New Player("Jack Gledhill", Date.FromOADate(9 / 4 / 1994), 9, "R", "Striker", False)
+        Dim PlayerCount As Int16 = 0
 
-        'TempList.Add(Player)
-        'TempList.Add(New Player("Jon Pankhurst", Date.FromOADate(19 / 8 / 1969), 9, "R", "Goal keeper", True))
+        Dim MyTeamSelection As New List(Of Player)
+        Dim player As Player
+
+        'list of players
+
+        For Each player In Sqaud.Players
+
+            'select his squad
+
+            PlayerCount = PlayerCount + 1
+
+            MyTeamSelection.Add(player)
+
+            If PlayerCount = 15 Then Exit For
+        Next
+
+        TeamList = MyTeamSelection
+
     End Sub
 End Class
