@@ -6,14 +6,10 @@ Public Class Possession
     Public PlayerNumber As Int16
     Public Sub New()
 
+        Dim MyValue As Integer
+        MyValue = CInt(Int((10 * Rnd()) + 0)) ' Generate random value between 1 and 6.
 
-        Randomize()
-        Dim rn As New Random
-
-        PlayerNumber = rn.Next(0, 10)
-
-        rn = Nothing
-
+        PlayerNumber = MyValue
 
     End Sub
 End Class
