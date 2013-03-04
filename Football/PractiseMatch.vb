@@ -4,15 +4,9 @@ Module PractiseMatch
     Sub Main()
 
         Dim MyManager As New Manager()
+        Dim PlayerPossesion As Int16 = RndPosession()
 
-        'Dim FilteredList As IEnumerable(Of Player)
-
-        ' FilteredList = From t In MyManager.TeamList Ord
-
-        Dim PlayerCount As Int16 = 15
-
-
-
+        MyManager.TeamList(PlayerPossesion).Possession = True
 
         For Each Player In MyManager.TeamList
             If Player.Possession Then
@@ -20,7 +14,6 @@ Module PractiseMatch
             Else
                 Console.WriteLine(CStr(Player.ShirtNumber) & " " & Player.Name)
             End If
-
         Next
 
     End Sub
