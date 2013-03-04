@@ -14,7 +14,6 @@ Module PractiseMatch
 
 
 
-
         For Each Player In MyManager.TeamList
             If Player.Possession Then
                 Console.WriteLine(CStr(Player.ShirtNumber) & " " & Player.Name & " ON THE BALL!")
@@ -27,6 +26,9 @@ Module PractiseMatch
     End Sub
 
 
-
+    Public Function RndPosession() As Integer
+        Dim Generator As System.Random = New System.Random()
+        Return Generator.Next(1, 11)
+    End Function
 
 End Module
