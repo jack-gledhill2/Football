@@ -1,7 +1,5 @@
 ﻿Public Class Manager
 
-    Private _rand As New Random()
-
     Public TeamList As IEnumerable(Of Player)
 
     Public Sub New()
@@ -29,4 +27,5 @@
         TeamList = MyTeamSelection
 
     End Sub
+
 End Class

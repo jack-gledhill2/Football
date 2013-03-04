@@ -5,7 +5,7 @@
     Private _shirtNumber As Integer
     Private _strongerFoot As String
     Private _position As String
-    Private _possession As Boolean
+    Public _possession As Boolean
 
     Public ReadOnly Property Age As Integer
         Get
@@ -39,6 +39,7 @@
         _possession = Possession
 
     End Sub
+
     Public Property Name As String
         Get
             Return _name

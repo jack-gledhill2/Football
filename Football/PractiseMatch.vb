@@ -3,10 +3,8 @@
 Module PractiseMatch
     Sub Main()
 
+        Dim Possession As New Possession()
         Dim MyManager As New Manager()
-        Dim PlayerPossesion As Int16 = RndPosession()
-
-        MyManager.TeamList(PlayerPossesion).Possession = True
 
         ' match starts
         For Each Player In MyManager.TeamList
@@ -17,23 +15,31 @@ Module PractiseMatch
             End If
         Next
 
-        'gill' keep possesssion for 11 passes
+        GameInPLay()
+        'Ball in play keep possesssion for 11 passes
+
         For a = 0 To 10
             'take ball away
-            MyManager.TeamList(PlayerPossesion).Possession = False
+            MyManager.TeamList(Possession.PlayerNumber).Possession = False
             'pick a new player to pass to
-            PlayerPossesion = RndPosession()
-            MyManager.TeamList(PlayerPossesion).Possession = True
+            Possession = New Possession()
+
             'Display the player
-            Console.WriteLine(CStr(MyManager.TeamList(PlayerPossesion).ShirtNumber) & " " & MyManager.TeamList(PlayerPossesion).Name & " ON THE BALL!")
+            Console.WriteLine(CStr(MyManager.TeamList(Possession.PlayerNumber).ShirtNumber) & " " & _
+                              MyManager.TeamList(Possession.PlayerNumber).Name & " ON THE BALL!")
         Next
+
+        Console.ReadKey()
 
     End Sub
 
 
-    Public Function RndPosession() As Integer
-        Dim Generator As System.Random = New System.Random()
-        Return Generator.Next(0, 10)
-    End Function
 
+    Sub GameInPLay()
+        Console.WriteLine("")
+        Console.WriteLine("--------------------")
+        Console.WriteLine("Game in play")
+        Console.WriteLine("--------------------")
+        Console.WriteLine("")
+    End Sub
 End Module
