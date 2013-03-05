@@ -9,7 +9,7 @@
     </SchemaVersion>
     <ProjectGuid>{E0811504-8883-47C0-B82D-E4C65263F699}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>Football.PractiseMatch</StartupObject>
+    <StartupObject>Football.PracticeMatch</StartupObject>
     <RootNamespace>Football</RootNamespace>
     <AssemblyName>Football</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -102,7 +102,7 @@
     </Compile>
     <Compile Include="Player.vb" />
     <Compile Include="Possession.vb" />
-    <Compile Include="PractiseMatch.vb" />
+    <Compile Include="PracticeMatch.vb" />
     <Compile Include="Squad.vb" />
     <Compile Include="Team.vb" />
   </ItemGroup>

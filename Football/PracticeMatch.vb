@@ -1,6 +1,6 @@
 ﻿Imports System.Linq
 
-Module PractiseMatch
+Module PracticeMatch
     Sub Main()
 
         Dim Possession As New Possession()
@@ -15,24 +15,32 @@ Module PractiseMatch
             End If
         Next
 
+        'Ball in play keep possesssion for 11 passes
         GameInPLay()
+
+        For a = 0 To 10
+            'take ball away
+            Possession = New Possession()
+
+        Next
+
+
         'Ball in play keep possesssion for 11 passes
 
         For a = 0 To 10
             'take ball away
-            MyManager.TeamList(Possession.PlayerNumber).Possession = False
-            'pick a new player to pass to
-            Possession = Nothing
-
             Possession = New Possession()
-
             'Display the player
             Console.WriteLine(CStr(MyManager.TeamList(Possession.PlayerNumber).ShirtNumber) & " " & _
                               MyManager.TeamList(Possession.PlayerNumber).Name & " ON THE BALL!")
+            MyManager.TeamList(Possession.PlayerNumber).Possession = False
+
+
+
+
         Next
 
         Console.ReadKey()
-
     End Sub
 
 
